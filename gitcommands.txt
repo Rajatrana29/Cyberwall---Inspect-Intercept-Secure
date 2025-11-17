@@ -1,0 +1,24 @@
+# status
+git status
+
+# stage & commit
+git add file
+git commit -m "message"
+
+# branch
+git checkout -b branch-name
+git branch   # list branches
+git checkout main
+
+# push/pull
+git push origin branch-name
+git pull origin main
+
+# fetch remote changes
+git fetch origin
+
+# see log
+git log --oneline --graph --all
+
+# clone
+git clone git@github.com:user/repo.git

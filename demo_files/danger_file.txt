@@ -1,0 +1,7 @@
+powershell -enc <BASE64_PAYLOAD>
+
+Suspicious tokens for demo:
+CreateRemoteThread
+GetProcAddress
+URLDownloadToFile
+cmd.exe /c "evil.exe"

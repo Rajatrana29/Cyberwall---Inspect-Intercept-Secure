@@ -1,0 +1,15 @@
+Computer Graphics
+T3 Syllabus
+T1 Syllabus   7 Marks
+T2 Syllabus   8 Marks
+T3 Syllabus   20 Marks
+Total              35 Marks
+Introduction to Computer Graphics: Overview of Computer Graphics, Computer Graphics Application and Software, Description of some graphics devices, Input Devices for Operator Interaction, Active and Passive Graphics Devices, Display Technologies, Storage Tube Graphics Displays, Calligraphic Refresh Graphics Displays, Raster Refresh (Raster-Scan) Graphics Displays, Cathode Ray Tube Basics, Colour CRT Raster Scan Basics, Video Basics, The Video Controller, Random-Scan Display Processor, LCD displays, Touch screen, Graphics Primitives. (3)
+
+Scan conversion – lines, circles and Ellipses; Filling polygons and clipping algorithms, Scan Converting Lines, Mid-point criteria, and clipping lines, Scan Converting Circles, Scan Converting Ellipses, (4)
+
+ Filling Polygons, , Clipping Lines algorithms–CohenSutherland and Liang-Barsky, Clipping Polygons, problem with multiple components (4)
+
+Two-Dimensional Transformations: Transformations and Matrices, Transformation Conventions, 2D Transformations, Homogeneous Coordinates and Matrix Representation of 2D Transformations, Translations and Homogeneous Coordinates, Rotation, Reflection, Scaling, Combined Transformation, Transformation of Points, Transformation of The Unit Square, Solid Body Transformations, Rotation About an Arbitrary Point, Reflection through an Arbitrary Line, A Geometric Interpretation of Homogeneous Coordinates, The Window- to-Viewport Transformations (4)
+
+Three-Dimensional Transformations and Viewing in 3D: Introduction, ThreeDimensional Scaling, Three-Dimensional Shearing, Three- Dimensional Rotation, Three-Dimensional Reflection, Three- Dimensional Translation, Multiple Transformation, Rotation about an Arbitrary Axis in Space, , Matrix Representation of 3D Transformations, Composition of 3D Transformations, Affine and Perspective Geometry, Perspective Transformations, Techniques for Generating Perspective Views, Vanishing Points, the Perspective Geometry and camera models, Orthographic Projections, Axonometric Projections, Oblique Projections, View volumes for projections. (12)

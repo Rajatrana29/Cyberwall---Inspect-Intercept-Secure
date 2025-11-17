@@ -1,0 +1,20 @@
+# React dashboard (frontend)
+dashboard/node_modules/
+dashboard/build/
+dashboard/.env
+
+# Python backend
+backend/venv/
+backend/__pycache__/
+backend/.env
+
+# OS + editor files
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Other unnecessary files
+*.pyc
