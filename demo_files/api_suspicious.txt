@@ -1,0 +1,4 @@
+CreateRemoteThread
+VirtualAlloc
+URLDownloadToFile
+ShellExecuteA

@@ -1,0 +1,20 @@
+]633;E;for i in {1..20};e5b42b3e-4d62-4311-ab8b-f63bada028b8]633;Chttp://malicious1.com
+http://malicious2.com
+http://malicious3.com
+http://malicious4.com
+http://malicious5.com
+http://malicious6.com
+http://malicious7.com
+http://malicious8.com
+http://malicious9.com
+http://malicious10.com
+http://malicious11.com
+http://malicious12.com
+http://malicious13.com
+http://malicious14.com
+http://malicious15.com
+http://malicious16.com
+http://malicious17.com
+http://malicious18.com
+http://malicious19.com
+http://malicious20.com
