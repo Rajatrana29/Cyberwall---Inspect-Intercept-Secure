@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+/* Background */
+body {
+  background: linear-gradient(120deg, #1c1f26, #262b33);
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Page Layout */
+.page-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-around;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+/* Card */
+.scanner-card,
+.history-card {
+  background: #2b2f38;
+  padding: 25px;
+  border-radius: 14px;
+  width: 45%;
+  min-width: 350px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.result-card {
+  background: #fff;
+  color: #000;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 12px;
+}
+
+.feature-table td {
+  border: 1px solid #ddd;
+  padding: 6px 10px;
+}
+
+/* Buttons */
+.scan-btn {
+  background: #4a90e2;
   color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 6px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.scan-btn:hover {
+  background: #357ab8;
 }
 
-@keyframes App-logo-spin {
+/* Status Colors */
+.status-safe {
+  color: #28d67b;
+  font-weight: bold;
+}
+
+.status-moderate {
+  color: #ffb300;
+  font-weight: bold;
+}
+
+.status-danger {
+  color: #ff4f4f;
+  font-weight: bold;
+}
+
+/* History */
+.history-card {
+  background: #2f343d;
+}
+
+.history-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.history-entry {
+  background: #3a3f49;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(8px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
