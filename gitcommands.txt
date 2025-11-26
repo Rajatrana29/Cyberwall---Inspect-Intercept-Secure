@@ -22,3 +22,8 @@ git log --oneline --graph --all
 
 # clone
 git clone git@github.com:user/repo.git
+
+#test commit to verify author
+git add gitcommands.txt
+git commit -m "Test: verify author information"
+git push origin main
