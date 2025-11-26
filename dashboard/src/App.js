@@ -30,21 +30,104 @@ function App() {
     });
 
     setResult(res.data);
+    saveToHistory(res.data);
+  };
+
+  const saveToHistory = (data) => {
+    const newEntry = {
+      filename: data.filename,
+      status: data.status,
+      score: data.score,
+      time: new Date().toLocaleString(),
+    };
+
+    const updated = [newEntry, ...history];
+    setHistory(updated);
+    localStorage.setItem("scanHistory", JSON.stringify(updated));
+  };
+
+  const getStatusClass = (status) => {
+    if (status === "Safe") return "status-safe";
+    if (status === "Moderate") return "status-moderate";
+    return "status-danger";
   };
 
   return (
-    <div style={{ padding: "50px", fontFamily: "sans-serif" }}>
-      <h1>CyberWall File Scanner</h1>
-      <input type="file" onChange={handleFileChange} />
-      <button onClick={handleUpload}>Scan</button>
+    <div className="page-container">
+      <div className="scanner-card fade-in">
+        <h1>🔒 CyberWall File Scanner</h1>
 
-      {result && (
-        <div style={{ marginTop: "20px" }}>
-          <h3>Result</h3>
-          <p><strong>Filename:</strong> {result.filename}</p>
-          <p><strong>Status:</strong> {result.status}</p>
+        <div className="upload-section">
+          <input type="file" onChange={handleFileChange} />
+          <button onClick={handleUpload} className="scan-btn">
+            Scan File
+          </button>
         </div>
-      )}
+
+        {result && (
+          <div className="result-card fade-in">
+            <h3>Scan Result</h3>
+
+            <p>
+              <strong>Filename:</strong> {result.filename}
+            </p>
+
+            <p>
+              <strong>Status:</strong>{" "}
+              <span className={getStatusClass(result.status)}>
+                {result.status}
+              </span>
+            </p>
+
+            <p>
+              <strong>Heuristic Score:</strong> {result.score}
+            </p>
+
+            <h4>Reasons:</h4>
+            <ul>
+              {result.reasons &&
+                result.reasons.map((r, index) => <li key={index}>{r}</li>)}
+            </ul>
+
+            <h4>Extracted Features:</h4>
+            <table className="feature-table">
+              <tbody>
+                {Object.entries(result.features).map(([key, value]) => (
+                  <tr key={key}>
+                    <td>
+                      <strong>{key}</strong>
+                    </td>
+                    <td>{value.toString()}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </div>
+
+      {/* HISTORY SECTION */}
+      <div className="history-card fade-in">
+        <h2>📜 Scan History</h2>
+
+        {history.length === 0 ? (
+          <p>No scans yet.</p>
+        ) : (
+          <ul className="history-list">
+            {history.map((item, index) => (
+              <li key={index} className="history-entry">
+                <span className="history-filename">{item.filename}</span>
+
+                <span className={`history-status ${getStatusClass(item.status)}`}>
+                  {item.status}
+                </span>
+
+                <span className="history-time">{item.time}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
     </div>
   );
 }
